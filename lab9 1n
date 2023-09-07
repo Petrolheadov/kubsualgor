@@ -10,18 +10,18 @@ def find_max_index(matrix):
     
     return max_i, max_j
 
-# Get the dimensions of the matrix from the user
-n = int(input("Enter the number of rows: "))
-m = int(input("Enter the number of columns: "))
+# Введите размеры матрицы:
+n = int(input("Введите количество рядов: "))
+m = int(input("Введите количество столбцов: "))
 
-# Initialize the matrix with user input
+# Инициализируйте матрицу
 matrix = []
 for i in range(n):
     row = list(map(int, input().split()))
     matrix.append(row)
 
-# Find the indices of the maximum element
+# Найдите индексы максимального элемента
 max_i, max_j = find_max_index(matrix)
 
-# Output the result
-print(f"The maximum element is at position ({max_i + 1}, {max_j + 1})")
+# Вывод результата
+print(f"Максимальный элемент находится на позиции ({max_i + 1}, {max_j + 1})")
