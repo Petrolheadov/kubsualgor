@@ -1,0 +1,24 @@
+n = int(input("Enter an odd number: "))
+
+# Create an n x n matrix filled with dots (.)
+matrix = [['.' for _ in range(n)] for _ in range(n)]
+
+# Fill the middle row with asterisks (*)
+for j in range(n):
+    matrix[n // 2][j] = '*'
+
+# Fill the middle column with asterisks (*)
+for i in range(n):
+    matrix[i][n // 2] = '*'
+
+# Fill the main diagonal with asterisks (*)
+for i in range(n):
+    matrix[i][i] = '*'
+
+# Fill the secondary diagonal with asterisks (*)
+for i in range(n):
+    matrix[i][n - i - 1] = '*'
+
+# Print the resulting matrix
+for row in matrix:
+    print(' '.join(row))
