@@ -6,7 +6,7 @@ def capitalize_sentence(sentence):
     capitalized_words = [capitalize(word) for word in words]
     return ' '.join(capitalized_words)
 
-# Example usage
-input_string = "hello world how are you"
+# Пример
+input_string = imput(string)
 capitalized_string = capitalize_sentence(input_string)
 print(capitalized_string)
