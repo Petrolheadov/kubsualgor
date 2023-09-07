@@ -2,25 +2,25 @@ def swap_columns(a, i, j):
     for row in a:
         row[i], row[j] = row[j], row[i]
 
-# Function to print the matrix
+# Функция для печати матрицы
 def print_matrix(matrix):
     for row in matrix:
         print(' '.join(map(str, row)))
 
-# Get the dimensions of the matrix from the user
+# Введите размеры матрицы 
 n, m = map(int, input("Enter the number of rows and columns (n m): ").split())
 
-# Initialize the matrix with user input
+# Инициализируем матрицу
 matrix = []
 for i in range(n):
     row = list(map(int, input().split()))
     matrix.append(row)
 
-# Get the columns to swap from the user
+# Выберите столбцы для обмена
 i, j = map(int, input("Enter the columns to swap (i j): ").split())
 
-# Swap the columns using the function
+# меняем столбцы
 swap_columns(matrix, i, j)
 
-# Print the resulting matrix
+# выводим итоговую матрицу
 print_matrix(matrix)
