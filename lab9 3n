@@ -1,9 +1,9 @@
-n = int(input("Enter the number of rows (n): "))
-m = int(input("Enter the number of columns (m): "))
+n = int(input("Введите количество рядов (n): "))
+m = int(input("Введите количество столбцов (m): "))
 
-# Create an n x m matrix filled with "." and "*"
+# Создаём матрицу n x m, заполненную символами "." и "*"
 matrix = [['.' if (i+j) % 2 == 0 else '*' for j in range(m)] for i in range(n)]
 
-# Print the resulting matrix
+# Выводим итоговую матрицу
 for row in matrix:
     print(' '.join(row))
