@@ -1,24 +1,24 @@
-n = int(input("Enter an odd number: "))
+n = int(input("Введите нечетное число: "))
 
-# Create an n x n matrix filled with dots (.)
+# Создаём матрицу n x n, заполненную точками (.)
 matrix = [['.' for _ in range(n)] for _ in range(n)]
 
-# Fill the middle row with asterisks (*)
+# Заполним средний ряд звездочками (*)
 for j in range(n):
     matrix[n // 2][j] = '*'
 
-# Fill the middle column with asterisks (*)
+# Заполним средний столбец звездочками (*)
 for i in range(n):
     matrix[i][n // 2] = '*'
 
-# Fill the main diagonal with asterisks (*)
+# Заполним главную диагональ звёздочками (*)
 for i in range(n):
     matrix[i][i] = '*'
 
-# Fill the secondary diagonal with asterisks (*)
+# Заполним вторую диагональ звёздочками (*)
 for i in range(n):
     matrix[i][n - i - 1] = '*'
 
-# Print the resulting matrix
+# Выводим итоговую матрицу
 for row in matrix:
     print(' '.join(row))
