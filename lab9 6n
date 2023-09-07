@@ -1,0 +1,26 @@
+def swap_columns(a, i, j):
+    for row in a:
+        row[i], row[j] = row[j], row[i]
+
+# Function to print the matrix
+def print_matrix(matrix):
+    for row in matrix:
+        print(' '.join(map(str, row)))
+
+# Get the dimensions of the matrix from the user
+n, m = map(int, input("Enter the number of rows and columns (n m): ").split())
+
+# Initialize the matrix with user input
+matrix = []
+for i in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# Get the columns to swap from the user
+i, j = map(int, input("Enter the columns to swap (i j): ").split())
+
+# Swap the columns using the function
+swap_columns(matrix, i, j)
+
+# Print the resulting matrix
+print_matrix(matrix)

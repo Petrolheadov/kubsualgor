@@ -1,0 +1,12 @@
+def capitalize(word):
+    return word[0].upper() + word[1:]
+
+def capitalize_sentence(sentence):
+    words = sentence.split()
+    capitalized_words = [capitalize(word) for word in words]
+    return ' '.join(capitalized_words)
+
+# Example usage
+input_string = "hello world how are you"
+capitalized_string = capitalize_sentence(input_string)
+print(capitalized_string)

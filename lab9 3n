@@ -1,0 +1,9 @@
+n = int(input("Enter the number of rows (n): "))
+m = int(input("Enter the number of columns (m): "))
+
+# Create an n x m matrix filled with "." and "*"
+matrix = [['.' if (i+j) % 2 == 0 else '*' for j in range(m)] for i in range(n)]
+
+# Print the resulting matrix
+for row in matrix:
+    print(' '.join(row))
